@@ -6,8 +6,145 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
+
+
+
+
 // Add a marker to the map for New York City
-var marker = L.marker([35.155161840409285, -90.05230046632413]).addTo(map);
+var Bassmarker = L.marker([35.155161840409285, -90.05230046632413]).addTo(map);
 
 // Add a popup to the marker
-marker.bindPopup("<b>Bass Pro Shops!</b><br>This is a Leaflet map.").openPopup();
+Bassmarker.bindPopup("<b>Bass Pro Shops!</b><br>This is a Leaflet map.").openPopup()
+
+
+
+
+// Add a marker to the map for New York City
+var Westymarker = L.marker([35.15431775400646, -90.04903258794836]).addTo(map);
+
+
+// Add a popup to the marker
+Westymarker.bindPopup(`
+    <b>Westy's</b><br>Restaurant <br>
+    <img src="https://aurashktest.github.io/aurashktest/images/pratt.jpg" style="width: 100px; height: auto;">
+`).openPopup();
+
+
+
+
+// Add a marker to the map for New York City
+var ftgreeneparkmarker = L.marker([40.69271525220281, -73.97682542294763]).addTo(map);
+
+
+// Add a popup to the marker
+ftgreeneparkmarker.bindPopup(`
+    <b>Ft Greene Park</b><br>Prison Ship Martrys Monument has good views of the city.<br>
+    <img src="https://aurashktest.github.io/aurashktest/images/psm.jpg"  style="width: 100px; height: auto;">
+`).openPopup();
+
+
+
+
+
+// Load the GeoJSON line file
+fetch('https://aurashktest.github.io/aurashktest/akdaytimeroute.geojson')
+    .then(response => response.json())
+    .then(geojson => {
+        // Customize the style of the line
+        var lineStyle = {
+            color: 'red', // Change color as needed
+            weight: 5, // Change weight as needed
+            opacity: 0.7 // Change opacity as needed
+        };
+
+        // Add the GeoJSON line to the map
+        L.geoJSON(geojson, {
+            style: lineStyle
+        }).addTo(map);
+    })
+    .catch(error => {
+        console.error('Error loading GeoJSON file:', error);
+    });
+
+
+    // Load the GeoJSON line file
+fetch('https://aurashktest.github.io/aurashktest/akeveningroute.geojson')
+.then(response => response.json())
+.then(geojson => {
+    // Customize the style of the line
+    var lineStyle = {
+        color: 'blue', // Change color as needed
+        weight: 5, // Change weight as needed
+        opacity: 0.7 // Change opacity as needed
+    };
+
+    // Add the GeoJSON line to the map
+    L.geoJSON(geojson, {
+        style: lineStyle
+    }).addTo(map);
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error);
+});
+
+
+
+
+
+
+// Load the GeoJSON polygon file
+fetch('https://aurashktest.github.io/aurashktest/akeveningroutebuildings.geojson')
+.then(response => response.json())
+.then(geojson => {
+    // Customize the style of the polygon
+    var polygonStyle = {
+        fillColor: 'black', // Fill color
+        fillOpacity: 0.5, // Fill opacity
+    };
+
+    // Add the GeoJSON polygon to the map
+    L.geoJSON(geojson, {
+        style: polygonStyle
+    }).addTo(map);
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error);
+});
+
+
+
+
+
+var categoryColors = {
+    "1": "red",
+    "2": "orange",
+    "3": "yellow",
+    "4": "green",
+    "X": "gray" // Default color for other categories
+};
+
+
+// Function to set style based on category
+function getFeatureStyle(feature) {
+    var category = feature.properties.hurricane_; // Adjust property name
+    var color = categoryColors[category] || "gray"; // Default color if category not found
+    var fillOpacity = category === "X" ? 0 : 0.1; // Set fill opacity to 0 for "X" category
+    return {
+        fillColor: color,
+        fillOpacity: fillOpacity,
+    };
+}
+
+
+// Load the GeoJSON polygon file
+fetch('https://aurashktest.github.io/aurashktest/hev.geojson')
+.then(response => response.json())
+.then(geojson => {
+    // Add the GeoJSON polygons to the map with customized style
+    L.geoJSON(geojson, {
+        style: getFeatureStyle
+    }).addTo(map);
+})
+.catch(error => {
+    console.error('Error loading GeoJSON file:', error);
+});
