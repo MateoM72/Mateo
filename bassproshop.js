@@ -1,5 +1,5 @@
 // Initialize Leaflet map
-var map = L.map('nymap').setView([35.15489868446626, -90.05240775467759], 13); // Set center to New York City and zoom level
+var map = L.map('nymap').setView([40.60443178048057, -74.15872463093191], 13); // Set center to New York City and zoom level
 
 // Add a tile layer to the map (for example, OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -11,7 +11,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 // Add a marker to the map for New York City
-var Bassmarker = L.marker([35.155161840409285, -90.05230046632413]).addTo(map);
+var Lakemarker = L.marker([40.60443178048057, -74.15872463093191]).addTo(map);
 
 // Add a popup to the marker
 Bassmarker.bindPopup("<b>Bass Pro Shops!</b><br>This is a Leaflet map.").openPopup()
