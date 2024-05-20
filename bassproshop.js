@@ -14,8 +14,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var Lakemarker = L.marker([40.60443178048057, -74.15872463093191]).addTo(map);
 
 // Add a popup to the marker
-Bassmarker.bindPopup("<b>Bass Pro Shops!</b><br>This is a Leaflet map.").openPopup()
-
+Lakemarker.bindPopup(`
+    <b>Willowbrook Lake</b><br>Excellent fishing, Big Bass.<br>
+    <img src="https://mateom72.github.io/Mateo/lake.jpg"  style="width: 100px; height: auto;">
+`).openPopup();
 
 
 
