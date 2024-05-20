@@ -47,7 +47,7 @@ ftgreeneparkmarker.bindPopup(`
 
 
 // Load the GeoJSON line file
-fetch('https://mateom72.github.io/Mateo/Mateo_daytimeRoute')
+fetch('https://mateom72.github.io/Mateo/Mateo_daytimeRoute.geojson')
     .then(response => response.json())
     .then(geojson => {
         // Customize the style of the line
@@ -68,7 +68,7 @@ fetch('https://mateom72.github.io/Mateo/Mateo_daytimeRoute')
 
 
     // Load the GeoJSON line file
-fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute')
+fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute.geojson')
 .then(response => response.json())
 .then(geojson => {
     // Customize the style of the line
