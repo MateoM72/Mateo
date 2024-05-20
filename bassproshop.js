@@ -1,5 +1,5 @@
 // Initialize Leaflet map
-var map = L.map('nymap').setView([40.681801312931455, -73.9571896025164], 13); // Set center to New York City and zoom level
+var map = L.map('nymap').setView([40.600660869718055, -74.16006720810553], 13); // Set center to New York City and zoom level
 
 // Add a tile layer to the map (for example, OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -11,24 +11,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 // Add a marker to the map for New York City
-var luigismarker = L.marker([40.68965691085725, -73.96537769031497]).addTo(map);
+var Lakemarker = L.marker([40.60443178048057, -74.15872463093191]).addTo(map);
 
 // Add a popup to the marker
-luigismarker.bindPopup(`
-    <b>Luigi's Pizza</b><br>Best pizza on Dekalb Ave<br>
-    <img src="https://aurashktest.github.io/aurashktest/images/luigis.png" style="width: 100px; height: auto;">
+Lakemarker.bindPopup(`
+    <b>Willowbrook Lake</b><br>Excellent fishing, Big Bass.<br>
+    <img src="https://mateom72.github.io/Mateo/lake.jpg"  style="width: 100px; height: auto;">
 `).openPopup();
 
 
 
-
 // Add a marker to the map for New York City
-var prattinstmarker = L.marker([40.69099831383163, -73.96332055134893]).addTo(map);
+var Westymarker = L.marker([35.15431775400646, -90.04903258794836]).addTo(map);
 
 
 // Add a popup to the marker
-prattinstmarker.bindPopup(`
-    <b>Pratt Institute</b><br>Sculpture Garden and green space <br>
+Westymarker.bindPopup(`
+    <b>Westy's</b><br>Restaurant <br>
     <img src="https://aurashktest.github.io/aurashktest/images/pratt.jpg" style="width: 100px; height: auto;">
 `).openPopup();
 
@@ -50,7 +49,7 @@ ftgreeneparkmarker.bindPopup(`
 
 
 // Load the GeoJSON line file
-fetch('https://aurashktest.github.io/aurashktest/akdaytimeroute.geojson')
+fetch('https://mateom72.github.io/Mateo/Mateo_daytimeRoute.geojson')
     .then(response => response.json())
     .then(geojson => {
         // Customize the style of the line
@@ -71,7 +70,7 @@ fetch('https://aurashktest.github.io/aurashktest/akdaytimeroute.geojson')
 
 
     // Load the GeoJSON line file
-fetch('https://aurashktest.github.io/aurashktest/akeveningroute.geojson')
+fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute.geojson')
 .then(response => response.json())
 .then(geojson => {
     // Customize the style of the line
@@ -151,3 +150,4 @@ fetch('https://aurashktest.github.io/aurashktest/hev.geojson')
 .catch(error => {
     console.error('Error loading GeoJSON file:', error);
 });
+
