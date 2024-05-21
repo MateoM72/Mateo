@@ -158,7 +158,7 @@ function getFeatureStyle(feature) {
 
 
 // Load the GeoJSON polygon file
-fetch('https://mateom72.github.io/HEV.geojson')
+fetch('https://aurashktest.github.io/aurashktest/hev.geojson')
 .then(response => response.json())
 .then(geojson => {
     // Add the GeoJSON polygons to the map with customized style
@@ -169,4 +169,3 @@ fetch('https://mateom72.github.io/HEV.geojson')
 .catch(error => {
     console.error('Error loading GeoJSON file:', error);
 });
-
