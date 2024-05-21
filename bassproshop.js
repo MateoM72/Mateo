@@ -22,26 +22,26 @@ Lakemarker.bindPopup(`
 
 
 // Add a marker to the map for New York City
-var Westymarker = L.marker([35.15431775400646, -90.04903258794836]).addTo(map);
+var Westymarker = L.marker([40.597711873833354, -74.15469227557561]).addTo(map);
 
 
 // Add a popup to the marker
 Westymarker.bindPopup(`
-    <b>Westy's</b><br>Restaurant <br>
-    <img src="https://aurashktest.github.io/aurashktest/images/pratt.jpg" style="width: 100px; height: auto;">
+    <b>Willowbrook white trail</b><br>A fun hike with a kinda scary bridge <br> 
+    <img src="https://mateom72.github.io/Mateo/trail.webp" style="width: 100px; height: auto;">
 `).openPopup();
 
 
 
 
 // Add a marker to the map for New York City
-var ftgreeneparkmarker = L.marker([40.69271525220281, -73.97682542294763]).addTo(map);
+var Centermarker = L.marker([40.58836446202525, -74.13912782354012]).addTo(map);
 
 
 // Add a popup to the marker
-ftgreeneparkmarker.bindPopup(`
-    <b>Ft Greene Park</b><br>Prison Ship Martrys Monument has good views of the city.<br>
-    <img src="https://aurashktest.github.io/aurashktest/images/psm.jpg"  style="width: 100px; height: auto;">
+Centermarker.bindPopup(`
+    <b>Ft Greenbelt Nature Center</b><br>Animals and fun hiking trails, a fine starting and ending points for hiking.<br>
+    <img src="https://mateom72.github.io/Mateo/center.jpg"  style="width: 100px; height: auto;">
 `).openPopup();
 
 
