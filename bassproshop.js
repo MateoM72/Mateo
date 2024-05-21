@@ -95,7 +95,7 @@ fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute.geojson')
 
 
 // Load the GeoJSON polygon file
-fetch('https://aurashktest.github.io/aurashktest/akeveningroutebuildings.geojson')
+fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute.geojson')
 .then(response => response.json())
 .then(geojson => {
     // Customize the style of the polygon
@@ -139,7 +139,7 @@ function getFeatureStyle(feature) {
 
 
 // Load the GeoJSON polygon file
-fetch('https://aurashktest.github.io/aurashktest/hev.geojson')
+fetch('https://mateom72.github.io/Mateo/Mateo_eveningRoute.geojson')
 .then(response => response.json())
 .then(geojson => {
     // Add the GeoJSON polygons to the map with customized style
