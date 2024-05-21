@@ -46,14 +46,18 @@ Centermarker.bindPopup(`
 
 // Add a marker to the map for New York City
 var Crepemarker = L.marker([40.575986520444395, -74.10352130441221]).addTo(map);
+
 // Add a popup to the marker
 CrepeMarker.bindPopup(`
     <b>Crepe Stop</b><br>best crepes on the island.<br>
     <img src="https://mateom72.github.io/Mateo/crepestop.jpg"  style="width: 100px; height: auto;">
 `).openPopup();
+
 // Add a marker to the map for New York City
 var Boardmarker = L.marker([40.576826541496956, -74.0790069905366]).addTo(map);
+
 // Add a popup to the marker
+
 BoardMarker.bindPopup(`
     <b>Midland Beach Boardwalk</b><br>Beautiful views, you can even see the verrazano from there.<br>
     <img src="https://mateom72.github.io/Mateo/midland.jpg"  style="width: 100px; height: auto;">
