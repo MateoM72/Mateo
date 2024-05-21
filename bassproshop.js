@@ -37,12 +37,31 @@ Westymarker.bindPopup(`
 // Add a marker to the map for New York City
 var Centermarker = L.marker([40.58836446202525, -74.13912782354012]).addTo(map);
 
-
-// Add a popup to the marker
 Centermarker.bindPopup(`
     <b>Ft Greenbelt Nature Center</b><br>Animals and fun hiking trails, a fine starting and ending points for hiking.<br>
     <img src="https://mateom72.github.io/Mateo/center.jpg"  style="width: 100px; height: auto;">
 `).openPopup();
+
+// Add a marker to the map for New York City
+var Crepemarker = L.marker([40.575986520444395, -74.10352130441221]).addTo(map);
+
+// Add a popup to the marker
+Crepemarker.bindPopup(`
+    <b>Crepe Stop</b><br>best crepes on the island.<br>
+    <img src="https://mateom72.github.io/Mateo/crepestop.jpg"  style="width: 100px; height: auto;">
+`).openPopup();
+
+// Add a marker to the map for New York City
+var Boardmarker = L.marker([40.576826541496956, -74.0790069905366]).addTo(map);
+
+// Add a popup to the marker
+
+Boardmarker.bindPopup(`
+    <b>Midland Beach Boardwalk</b><br>Beautiful views, you can even see the verrazano from there.<br>
+    <img src="https://mateom72.github.io/Mateo/midland.jpg"  style="width: 100px; height: auto;">
+`).openPopup();
+
+
 
 
 
